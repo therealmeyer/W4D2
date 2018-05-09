@@ -1,0 +1,24 @@
+<%= render 'cats', cat: @cat %>
+
+<div align="center">
+  <a href="<%= new_cat_cat_rental_request_url(@cat) %>">Request <%=@cat.name%>!</a>
+</div>
+
+<br>
+<br>
+<ul align="center" style="list-style-type:none">
+  <% @cat.cat_rental_requests.order('start_date DESC').each do |request| %>
+  <h2> Request
+  </h2>
+    <li>Start Date: <%= request.start_date %></li>
+    <li>End Date: <%= request.end_date %></li>
+    <li>Status: <%= request.status %></li>
+    <li><%= button_to "Approve", approve_cat_cat_rental_request_url(request), method: :approve %></li>
+    <li><%= button_to "Deny", deny_cat_cat_rental_request_url(request), method: :deny %></li>
+    
+  <% end %>
+</ul>
+<div align="center">
+  <a href="<%= cats_url %>">Back to Cats!</a>
+</div>
+

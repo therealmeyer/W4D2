@@ -1,0 +1,10 @@
+<% @cats.each do |cat| %>
+  <%=render 'cats', cat: cat %>
+  <div align= "center">
+    <a href="<%= edit_cat_url(cat)%>">Edit Cat!</a>
+  </div>
+  <br>
+<% end %>
+  <div align= "center">
+    <a align= "center" href="<%= new_cat_url %>">Create New Cat!</a>
+  </div>

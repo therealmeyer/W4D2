@@ -1,0 +1,21 @@
+
+<table align="center" border="1" cellpadding="10px 100px" width= "800px">
+  <colgroup span="5"></colgroup>
+  <tr>
+    <th width="10%">Name</th>
+    <th width="10%">Birth Date</th>
+    <th width="10%">Color</th>
+    <th width="5%">Sex</th>
+    <th width="65%">Description</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="<%=cat_url(cat)%>"><%= cat.name %></a>
+    </td>
+    <td><%= cat.birth_date %></td>
+    <td><%= cat.color %></td>
+    <td><%= cat.sex %></td>
+    <td><%= cat.description %></td>
+  </tr>  
+</table>
+
